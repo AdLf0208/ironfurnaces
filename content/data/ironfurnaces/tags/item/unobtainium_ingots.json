@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/unobtainium",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/voidium",
+      "required": false
+    }
+  ]
+}
