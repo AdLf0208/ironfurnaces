@@ -11,9 +11,9 @@ pub const OUTPUT: usize = 2;
 /// Slots in a furnace.
 pub const SLOTS: usize = 3;
 
-/// The eight tiers ported here. The jar also ships silver, allthemodium,
-/// vibranium, unobtainium and the rainbow furnace; they need other mods'
-/// materials and are out of scope.
+/// The twelve tiers ported here. Silver and the three modded tiers
+/// (allthemodium, vibranium, unobtainium) are crafted from other mods'
+/// metals; the rainbow furnace is out of scope.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Tier {
     Copper,
@@ -24,10 +24,14 @@ pub enum Tier {
     Obsidian,
     Crystal,
     Netherite,
+    Silver,
+    Allthemodium,
+    Vibranium,
+    Unobtainium,
 }
 
 impl Tier {
-    pub const ALL: [Tier; 8] = [
+    pub const ALL: [Tier; 12] = [
         Tier::Copper,
         Tier::Iron,
         Tier::Gold,
@@ -36,6 +40,10 @@ impl Tier {
         Tier::Obsidian,
         Tier::Crystal,
         Tier::Netherite,
+        Tier::Silver,
+        Tier::Allthemodium,
+        Tier::Vibranium,
+        Tier::Unobtainium,
     ];
 
     /// The tier of a block name (`ironfurnaces:iron_furnace`).
@@ -54,6 +62,10 @@ impl Tier {
             Tier::Obsidian => "ironfurnaces:obsidian_furnace",
             Tier::Crystal => "ironfurnaces:crystal_furnace",
             Tier::Netherite => "ironfurnaces:netherite_furnace",
+            Tier::Silver => "ironfurnaces:silver_furnace",
+            Tier::Allthemodium => "ironfurnaces:allthemodium_furnace",
+            Tier::Vibranium => "ironfurnaces:vibranium_furnace",
+            Tier::Unobtainium => "ironfurnaces:unobtainium_furnace",
         }
     }
 
@@ -68,6 +80,10 @@ impl Tier {
             Tier::Obsidian => 20,
             Tier::Crystal => 40,
             Tier::Netherite => 5,
+            Tier::Silver => 140,
+            Tier::Allthemodium => 5,
+            Tier::Vibranium => 3,
+            Tier::Unobtainium => 1,
         }
     }
 
@@ -82,6 +98,10 @@ impl Tier {
             Tier::Obsidian => "obsidian",
             Tier::Crystal => "crystal",
             Tier::Netherite => "netherite",
+            Tier::Silver => "silver",
+            Tier::Allthemodium => "allthemodium",
+            Tier::Vibranium => "vibranium",
+            Tier::Unobtainium => "unobtainium",
         }
     }
 }
@@ -96,7 +116,7 @@ pub struct Upgrade {
 
 /// Every upgrade whose two ends are ported here, in the jar's registration
 /// order. `minecraft:furnace` is the vanilla furnace.
-pub const UPGRADES: [Upgrade; 10] = [
+pub const UPGRADES: [Upgrade; 16] = [
     Upgrade {
         item: "ironfurnaces:upgrade_iron",
         from: "minecraft:furnace",
@@ -146,6 +166,36 @@ pub const UPGRADES: [Upgrade; 10] = [
         item: "ironfurnaces:upgrade_iron2",
         from: "ironfurnaces:copper_furnace",
         to: "ironfurnaces:iron_furnace",
+    },
+    Upgrade {
+        item: "ironfurnaces:upgrade_silver",
+        from: "ironfurnaces:copper_furnace",
+        to: "ironfurnaces:silver_furnace",
+    },
+    Upgrade {
+        item: "ironfurnaces:upgrade_silver2",
+        from: "ironfurnaces:iron_furnace",
+        to: "ironfurnaces:silver_furnace",
+    },
+    Upgrade {
+        item: "ironfurnaces:upgrade_gold2",
+        from: "ironfurnaces:silver_furnace",
+        to: "ironfurnaces:gold_furnace",
+    },
+    Upgrade {
+        item: "ironfurnaces:upgrade_allthemodium",
+        from: "ironfurnaces:netherite_furnace",
+        to: "ironfurnaces:allthemodium_furnace",
+    },
+    Upgrade {
+        item: "ironfurnaces:upgrade_vibranium",
+        from: "ironfurnaces:allthemodium_furnace",
+        to: "ironfurnaces:vibranium_furnace",
+    },
+    Upgrade {
+        item: "ironfurnaces:upgrade_unobtainium",
+        from: "ironfurnaces:vibranium_furnace",
+        to: "ironfurnaces:unobtainium_furnace",
     },
 ];
 
@@ -279,6 +329,10 @@ mod tests {
         assert_eq!(Tier::Obsidian.base_ticks(), 20);
         assert_eq!(Tier::Crystal.base_ticks(), 40);
         assert_eq!(Tier::Netherite.base_ticks(), 5);
+        assert_eq!(Tier::Silver.base_ticks(), 140);
+        assert_eq!(Tier::Allthemodium.base_ticks(), 5);
+        assert_eq!(Tier::Vibranium.base_ticks(), 3);
+        assert_eq!(Tier::Unobtainium.base_ticks(), 1);
     }
 
     #[test]
@@ -292,7 +346,15 @@ mod tests {
             Some(Tier::Netherite)
         );
         assert_eq!(Tier::from_block("minecraft:furnace"), None);
-        assert_eq!(Tier::from_block("ironfurnaces:silver_furnace"), None);
+        assert_eq!(
+            Tier::from_block("ironfurnaces:silver_furnace"),
+            Some(Tier::Silver)
+        );
+        assert_eq!(
+            Tier::from_block("ironfurnaces:unobtainium_furnace"),
+            Some(Tier::Unobtainium)
+        );
+        assert_eq!(Tier::from_block("ironfurnaces:million_furnace"), None);
     }
 
     #[test]
@@ -508,10 +570,33 @@ mod tests {
             upgrade_target("ironfurnaces:iron_furnace", "minecraft:diamond"),
             None
         );
-        // An out-of-scope upgrade does nothing.
+        // Silver sits between copper/iron and gold.
+        assert_eq!(
+            upgrade_target("ironfurnaces:copper_furnace", "ironfurnaces:upgrade_silver"),
+            Some("ironfurnaces:silver_furnace")
+        );
         assert_eq!(
             upgrade_target("ironfurnaces:iron_furnace", "ironfurnaces:upgrade_silver"),
             None
+        );
+        assert_eq!(
+            upgrade_target("ironfurnaces:silver_furnace", "ironfurnaces:upgrade_gold2"),
+            Some("ironfurnaces:gold_furnace")
+        );
+        // The modded tiers chain on from netherite.
+        assert_eq!(
+            upgrade_target(
+                "ironfurnaces:netherite_furnace",
+                "ironfurnaces:upgrade_allthemodium"
+            ),
+            Some("ironfurnaces:allthemodium_furnace")
+        );
+        assert_eq!(
+            upgrade_target(
+                "ironfurnaces:vibranium_furnace",
+                "ironfurnaces:upgrade_unobtainium"
+            ),
+            Some("ironfurnaces:unobtainium_furnace")
         );
     }
 

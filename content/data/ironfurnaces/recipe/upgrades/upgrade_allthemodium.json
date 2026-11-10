@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B#B",
+    "#X#",
+    "B#B"
+  ],
+  "key": {
+    "#": "#ironfurnaces:allthemodium_ingots",
+    "B": "#ironfurnaces:allthemodium_corners",
+    "X": "#ironfurnaces:netherite_upgrade_crafting"
+  },
+  "result": {
+    "id": "ironfurnaces:upgrade_allthemodium"
+  }
+}

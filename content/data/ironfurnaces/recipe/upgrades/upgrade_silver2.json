@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#G#",
+    "GXG",
+    "#G#"
+  ],
+  "key": {
+    "#": "#c:ingots/silver",
+    "X": "#c:ingots/iron",
+    "G": "#c:glass_blocks/colorless"
+  },
+  "result": {
+    "id": "ironfurnaces:upgrade_silver2"
+  }
+}

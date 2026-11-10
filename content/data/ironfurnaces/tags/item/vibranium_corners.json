@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:storage_blocks/vibranium",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/infernium",
+      "required": false
+    }
+  ]
+}

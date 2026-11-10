@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B#B",
+    "#X#",
+    "B#B"
+  ],
+  "key": {
+    "#": "#ironfurnaces:vibranium_ingots",
+    "B": "#ironfurnaces:vibranium_corners",
+    "X": "#ironfurnaces:allthemodium_ingots"
+  },
+  "result": {
+    "id": "ironfurnaces:upgrade_vibranium"
+  }
+}

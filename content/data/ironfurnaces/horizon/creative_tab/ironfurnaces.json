@@ -10,6 +10,10 @@
     "ironfurnaces:crystal_furnace",
     "ironfurnaces:netherite_furnace",
     "ironfurnaces:copper_furnace",
+    "ironfurnaces:silver_furnace",
+    "ironfurnaces:allthemodium_furnace",
+    "ironfurnaces:vibranium_furnace",
+    "ironfurnaces:unobtainium_furnace",
     "ironfurnaces:upgrade_iron",
     "ironfurnaces:upgrade_gold",
     "ironfurnaces:upgrade_diamond",
@@ -19,6 +23,12 @@
     "ironfurnaces:upgrade_netherite",
     "ironfurnaces:upgrade_copper",
     "ironfurnaces:upgrade_obsidian2",
-    "ironfurnaces:upgrade_iron2"
+    "ironfurnaces:upgrade_iron2",
+    "ironfurnaces:upgrade_silver",
+    "ironfurnaces:upgrade_silver2",
+    "ironfurnaces:upgrade_gold2",
+    "ironfurnaces:upgrade_allthemodium",
+    "ironfurnaces:upgrade_vibranium",
+    "ironfurnaces:upgrade_unobtainium"
   ]
 }

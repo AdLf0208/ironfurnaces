@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B#B",
+    "#X#",
+    "B#B"
+  ],
+  "key": {
+    "#": "#ironfurnaces:vibranium_ingots",
+    "X": "#c:furnaces/allthemodium",
+    "B": "#ironfurnaces:vibranium_corners"
+  },
+  "result": {
+    "id": "ironfurnaces:vibranium_furnace"
+  }
+}
