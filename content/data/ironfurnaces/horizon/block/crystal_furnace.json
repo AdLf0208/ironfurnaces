@@ -1,0 +1,27 @@
+{
+  "template": "minecraft:furnace",
+  "properties": {
+    "hardness": 3.0,
+    "explosion_resistance": 0.3,
+    "sounds": "minecraft:glass",
+    "requires_tool": false
+  },
+  "state_properties": {
+    "jovial": {
+      "type": "enum",
+      "values": [
+        "0",
+        "1"
+      ]
+    },
+    "type": {
+      "type": "enum",
+      "values": [
+        "0",
+        "1",
+        "2"
+      ]
+    }
+  },
+  "item": true
+}

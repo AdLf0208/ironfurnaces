@@ -1,0 +1,28 @@
+{
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "modifier": [
+            {
+              "include": [
+                "minecraft:custom_name"
+              ],
+              "source": "block_entity",
+              "type": "minecraft:copy_components"
+            }
+          ],
+          "name": "ironfurnaces:allthemodium_furnace",
+          "type": "minecraft:item"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ironfurnaces:blocks/allthemodium_furnace",
+  "type": "minecraft:block"
+}

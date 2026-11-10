@@ -1,0 +1,16 @@
+{
+  "key": {
+    "#": "#c:obsidians",
+    "X": "#c:glass_blocks/colorless",
+    "Y": "#c:rods/blaze"
+  },
+  "pattern": [
+    "#Y#",
+    "YXY",
+    "#Y#"
+  ],
+  "result": {
+    "id": "ironfurnaces:upgrade_obsidian2"
+  },
+  "type": "minecraft:crafting_shaped"
+}

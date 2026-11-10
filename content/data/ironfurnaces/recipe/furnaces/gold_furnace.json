@@ -1,0 +1,16 @@
+{
+  "key": {
+    "#": "#c:ingots/gold",
+    "X": "#c:furnaces/iron",
+    "Y": "#c:storage_blocks/gold"
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "#Y#"
+  ],
+  "result": {
+    "id": "ironfurnaces:gold_furnace"
+  },
+  "type": "minecraft:crafting_shaped"
+}

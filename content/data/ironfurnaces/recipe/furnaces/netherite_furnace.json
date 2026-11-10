@@ -1,0 +1,17 @@
+{
+  "key": {
+    "#": "minecraft:magma_cream",
+    "N": "minecraft:netherite_ingot",
+    "S": "#minecraft:soul_fire_base_blocks",
+    "X": "#c:furnaces/obsidian"
+  },
+  "pattern": [
+    "N#N",
+    "#X#",
+    "NSN"
+  ],
+  "result": {
+    "id": "ironfurnaces:netherite_furnace"
+  },
+  "type": "minecraft:crafting_shaped"
+}

@@ -1,0 +1,16 @@
+{
+  "key": {
+    "#": "#c:ingots/gold",
+    "X": "#c:ingots/iron",
+    "Y": "#c:storage_blocks/gold"
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "#Y#"
+  ],
+  "result": {
+    "id": "ironfurnaces:upgrade_gold"
+  },
+  "type": "minecraft:crafting_shaped"
+}

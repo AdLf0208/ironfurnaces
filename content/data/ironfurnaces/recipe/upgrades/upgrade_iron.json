@@ -1,0 +1,15 @@
+{
+  "key": {
+    "#": "#c:ingots/iron",
+    "X": "#minecraft:stone_tool_materials"
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "id": "ironfurnaces:upgrade_iron"
+  },
+  "type": "minecraft:crafting_shaped"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "itemGroup.ironfurnaces",
+  "icon": "ironfurnaces:iron_furnace",
+  "items": [
+    "ironfurnaces:iron_furnace",
+    "ironfurnaces:gold_furnace",
+    "ironfurnaces:diamond_furnace",
+    "ironfurnaces:emerald_furnace",
+    "ironfurnaces:obsidian_furnace",
+    "ironfurnaces:crystal_furnace",
+    "ironfurnaces:netherite_furnace",
+    "ironfurnaces:copper_furnace",
+    "ironfurnaces:upgrade_iron",
+    "ironfurnaces:upgrade_gold",
+    "ironfurnaces:upgrade_diamond",
+    "ironfurnaces:upgrade_emerald",
+    "ironfurnaces:upgrade_obsidian",
+    "ironfurnaces:upgrade_crystal",
+    "ironfurnaces:upgrade_netherite",
+    "ironfurnaces:upgrade_copper",
+    "ironfurnaces:upgrade_obsidian2",
+    "ironfurnaces:upgrade_iron2"
+  ]
+}

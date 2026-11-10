@@ -1,0 +1,49 @@
+id = "ironfurnaces"
+kind = "native-mod"
+name = "ironfurnaces"
+summary = "A Horizon port of ironfurnaces."
+description = """
+A port of [ironfurnaces](Qelifern/IronFurnaces) for Horizon.
+
+**Implemented so far**
+
+- The eight furnace tiers with vanilla-only recipes in the jar: **copper, iron,
+- gold, diamond, emerald, obsidian, crystal, netherite**. Smelting with fuel,
+- the tier speed, the coal-scaled burn time, the vanilla furnace menu (input /
+- fuel / output + the flame and arrow data slots), the `lit` state and the
+- tier-upgrade items. The jar also ships silver, allthemodium, vibranium,
+- unobtainium and the rainbow furnace; they need other mods' materials and are
+- deferred (their assets stay in the package, inert).
+- | Area | Upstream | This port |
+
+**Not yet ported**
+
+- Eight tiers only.** Silver, allthemodium, vibranium, unobtainium and the
+- rainbow furnace need other mods' materials; their assets are inert.
+- Augments, factory, generator, wireless heater, settings GUI, auto IO,
+- redstone modes and XP** are deferred. The furnace branch only.
+- Light 13 when lit** (the `minecraft:furnace` template) vs upstream 14.
+- Vanilla-furnace → copper/iron upgrades** are implemented (the source is
+- read through the vanilla furnace block entity and its 3 slots restored) but
+- the e2e exercises only copper→iron.
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "Apache-2.0"
+source = "https://github.com/AdLf0208/ironfurnaces"
+icon = "icons/ironfurnaces.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "ironfurnaces.hnmod"
+sha256 = "38c1b9177883f7a23f04c06decdd16a67fed3471e289d4567dc23f5c9b4af617"
+changelog = "First release"

@@ -1,0 +1,15 @@
+{
+  "key": {
+    "#": "#c:ingots/iron",
+    "X": "minecraft:furnace"
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "id": "ironfurnaces:iron_furnace"
+  },
+  "type": "minecraft:crafting_shaped"
+}

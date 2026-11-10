@@ -1,0 +1,12 @@
+# Port-owned content mod for Iron Furnaces 4.3.2 (Apache-2.0, Qelifern/
+# pizzaatime and XenoMustache). The assets are the upstream jar's own; the
+# block/item declarations are hand-written for 26.3 (the jar's `jovial`/`type`
+# states are not inferable from a vanilla template alone).
+id = "ironfurnaces"
+name = "Iron Furnaces"
+version = "4.3.2"
+description = "Tiered fuel furnaces, from copper to netherite, with upgrades"
+authors = ["Qelifern (pizzaatime)", "XenoMustache"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

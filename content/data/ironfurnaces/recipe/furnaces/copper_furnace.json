@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "c:ingots/copper"
+    },
+    "X": {
+       "item": "minecraft:furnace"
+    }
+  },
+  "result": {
+    "id": "ironfurnaces:copper_furnace"
+  },
+  "neoforge:conditions": [
+    {
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/copper"
+      },
+      "type": "neoforge:not"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "tag": "c:ingots/copper",
+        "type": "neoforge:tag_empty"
+      }
+    }
+  ],
+  "key": {
+    "#": "#c:ingots/iron",
+    "G": "#c:glass_blocks/colorless",
+    "X": "#c:ingots/copper"
+  },
+  "pattern": [
+    "###",
+    "GXG",
+    "###"
+  ],
+  "result": {
+    "id": "ironfurnaces:upgrade_iron2"
+  },
+  "type": "minecraft:crafting_shaped"
+}

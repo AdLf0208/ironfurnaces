@@ -1,0 +1,15 @@
+[package]
+name = "ironfurnaces"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+license = "Apache-2.0"
+description = "Iron Furnaces for Horizon: tiered fuel furnaces (copper..netherite)"
+
+[lib]
+# This exact source is also injected as a same-crate module by horizon-mixins.
+path = "mixins/ironfurnaces/runtime.rs"
+
+[workspace]
+members = ["tools/audit"]
+resolver = "2"

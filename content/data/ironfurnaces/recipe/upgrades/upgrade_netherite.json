@@ -1,0 +1,17 @@
+{
+  "key": {
+    "#": "minecraft:magma_cream",
+    "N": "minecraft:netherite_ingot",
+    "S": "#minecraft:soul_fire_base_blocks",
+    "X": "#c:obsidians"
+  },
+  "pattern": [
+    "N#N",
+    "#X#",
+    "NSN"
+  ],
+  "result": {
+    "id": "ironfurnaces:upgrade_netherite"
+  },
+  "type": "minecraft:crafting_shaped"
+}
